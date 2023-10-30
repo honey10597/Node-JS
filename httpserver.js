@@ -1,11 +1,9 @@
 const http = require("http")
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3000
 
 const server = http.createServer((req, res) => {
-
-    console.log(req)
-
+    console.log(req, "URL")
     res.statusCode = 200
     res.setHeader("Content-Type", "text/html")
     res.end("<h1>This is my first server</h1> <p> chak deeee </p>")
@@ -14,3 +12,4 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
     console.log(`Server is running on post ${port}`)
 })
+
